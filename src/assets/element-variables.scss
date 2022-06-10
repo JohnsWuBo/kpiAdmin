@@ -1,0 +1,73 @@
+/* 改变主题色变量 */
+$--color-primary: #f56c6c;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+
+
+// 侧边栏--------------------------------------------------------------------
+// 默认右边border
+.el-menu {
+    border-right: none !important;
+}
+//设置了默认左边框为白色
+.el-submenu .el-submenu__title{
+    border-left: transparent solid 6px;
+}
+//设置鼠标悬停时el-submenu的样式
+.el-submenu .el-submenu__title:hover{
+    border-left: #f56c6c solid 6px !important;
+    background-color: rgb(27, 32, 40) !important;
+    color: #f56c6c !important;
+    i {
+        color: #f56c6c !important;
+    }
+}
+
+// 默认icon颜色
+.el-menu-item,.el-submenu__title {
+    i {
+        color:#909399 !important;
+    }
+}
+
+//设置了默认左边框为白色
+.el-menu-item{
+    border-left:transparent solid 6px;
+}
+//设置鼠标悬停时el-menu-item的样式
+.el-menu-item:hover{
+    border-left:#f56c6c solid 6px !important;
+    background-color: rgb(27, 32, 40) !important;
+    color: #f56c6c !important;
+    i {
+        color: #f56c6c !important;
+    }
+}
+//设置选中el-menu-item时的样式
+.el-menu-item.is-active {
+    border-left:#f56c6c solid 6px !important;
+    background-color: rgb(27, 32, 40) !important;
+    color: #f56c6c !important;
+    i {
+        color: #f56c6c !important;
+    }
+}
+// -------------------------------------------------------------------------------
+// tabs 宽度
+.el-tabs_content{
+    width: 50% !important;
+}
+
+/*由于 element-ui 的<el-menu>标签本身希望里面嵌套的是<el-menu-item>,<el-submenu>,<el-menu-item-group>之一，但是却嵌套了<div>,而导致收折就隐藏不了文字*/
+/*隐藏文字*/
+.el-menu--collapse .el-submenu__title span{
+    display: none;
+}
+
+/* 隐藏 》 */
+.el-menu--collapse .el-menu__title .el-submenu__icon-arrow {
+    display: none;
+}
+@import "~element-ui/packages/theme-chalk/src/index";
